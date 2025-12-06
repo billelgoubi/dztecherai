@@ -1,0 +1,127 @@
+import { Product, ProductType } from './types';
+
+const WHATSAPP_NUMBER = '213558449995';
+
+const createWhatsAppLink = (productName: string) => {
+    const message = `السلام عليكم، أرغب في الاستفسار أو طلب منتج: "${productName}"`;
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+};
+
+export const products: Product[] = [
+    {
+        id: 1,
+        type: ProductType.SERVICE,
+        title: "تصميم الدروس التفاعلية",
+        description: "خدمة احترافية لتصميم دروس تفاعلية مخصصة تزيد من تفاعل ومشاركة الطلاب.",
+        price: 4600,
+        originalPrice: 6133,
+        pricePrefix: "ابتداءً من",
+        imageUrl: "https://picsum.photos/seed/lessons/600/400",
+        actionText: "اطلب الخدمة",
+        actionLink: createWhatsAppLink("تصميم الدروس التفاعلية"),
+        discount: 25,
+    },
+    {
+        id: 9,
+        type: ProductType.COURSE,
+        title: "دورة استعمالات الذكاء الاصطناعي للمعلمين",
+        description: "تعلم كيف تسخر قوة الذكاء الاصطناعي في التعليم لتطوير أساليبك وابتكار محتوى تعليمي فريد.",
+        price: 2500,
+        pricePrefix: "ابتداءً من",
+        imageUrl: "https://i.imgur.com/hIVSLsl.jpeg",
+        actionText: "سجل الآن",
+        actionLink: createWhatsAppLink("دورة استعمالات الذكاء الاصطناعي للمعلمين"),
+    },
+    {
+        id: 2,
+        type: ProductType.SERVICE,
+        title: "استشارة في الأدوات وتصميم الأنشطة",
+        description: "استشارة مخصصة لاختيار أفضل الأدوات الرقمية وتصميم أنشطة تفاعلية تلائم أهدافك التعليمية.",
+        price: 2500,
+        pricePrefix: "ابتداءً من",
+        imageUrl: "https://picsum.photos/seed/consulting/600/400",
+        actionText: "اطلب استشارة",
+        actionLink: createWhatsAppLink("استشارة في الأدوات وتصميم الأنشطة"),
+    },
+    {
+        id: 10,
+        type: ProductType.COURSE,
+        title: "دورة المساعد الذكي",
+        description: "اكتشف كيف يمكن للمساعدين الأذكياء تنظيم مهامك التعليمية وتوفير وقتك وجهدك.",
+        price: 1500,
+        pricePrefix: "ابتداءً من",
+        imageUrl: "https://picsum.photos/seed/assistant/600/400",
+        actionText: "سجل الآن",
+        actionLink: createWhatsAppLink("دورة المساعد الذكي"),
+    },
+    {
+        id: 3,
+        type: ProductType.PAID_PRODUCT,
+        title: "ملخص رسومي: بكالوريا وحدة أولى",
+        description: "ملخص شامل بالرسومات لتسهيل حفظ ومراجعة الوحدة الأولى لطلاب البكالوريا.",
+        price: 1200,
+        originalPrice: 2000,
+        imageUrl: "https://i.imgur.com/LYrwani.jpeg",
+        actionText: "اطلب الآن",
+        actionLink: createWhatsAppLink("ملخص رسومي: بكالوريا وحدة أولى"),
+        discount: 40,
+    },
+    {
+        id: 4,
+        type: ProductType.PAID_PRODUCT,
+        title: "ملخص رسومي: رابعة متوسط المقطع الثاني",
+        description: "ملخص كامل للمقطع الثاني لطلاب الرابعة متوسط، مصمم بالرسومات لترسيخ المعلومات.",
+        price: 1200,
+        originalPrice: 2000,
+        imageUrl: "https://i.imgur.com/W9nXkwI.jpeg",
+        actionText: "اطلب الآن",
+        actionLink: createWhatsAppLink("ملخص رسومي: رابعة متوسط المقطع الثاني"),
+        discount: 40,
+    },
+    {
+        id: 7,
+        type: ProductType.PAID_PRODUCT,
+        title: "لعبة العائلة التعليمية بالإنجليزية",
+        description: "لعبة ممتعة وتفاعلية لتعليم أفراد العائلة باللغة الإنجليزية بطريقة مبتكرة.",
+        price: 1000,
+        originalPrice: 1667,
+        imageUrl: "https://picsum.photos/seed/familygame/600/400",
+        actionText: "اطلب الآن",
+        actionLink: createWhatsAppLink("لعبة العائلة التعليمية بالإنجليزية"),
+        discount: 40,
+    },
+    {
+        id: 5,
+        type: ProductType.FREE_PRODUCT,
+        title: "ملخص تربية إسلامية ثالثة ابتدائي",
+        description: "ملخص مجاني لمادة التربية الإسلامية، يساعد تلاميذ السنة الثالثة ابتدائي على المراجعة.",
+        imageUrl: "https://picsum.photos/seed/islamic/600/400",
+        actionText: "تحميل مجاني",
+        actionLink: "https://drive.google.com/file/d/17Kdt8JOdeEYoZwssWMgYaHTRTJv9ZWm8/view?usp=sharing",
+    },
+    {
+        id: 6,
+        type: ProductType.FREE_PRODUCT,
+        title: "مراجعة شاملة لرابعة متوسط",
+        description: "ملف مراجعة مجاني وشامل لطلاب السنة الرابعة متوسط، يغطي أهم النقاط.",
+        imageUrl: "https://picsum.photos/seed/review4am/600/400",
+        actionText: "تحميل مجاني",
+        actionLink: "https://drive.google.com/file/d/1fAUkxN8LmqrqHGuY822I-ea2LZsAkTEM/view?usp=sharing",
+    },
+    {
+        id: 8,
+        type: ProductType.FREE_PRODUCT,
+        title: "اختبار نموذجي رابعة متوسط - فصل 1",
+        description: "نموذج اختبار مجاني للفصل الأول لمساعدة طلاب الرابعة متوسط على التحضير الجيد.",
+        imageUrl: "https://picsum.photos/seed/exam4am/600/400",
+        actionText: "تحميل مجاني",
+        actionLink: "https://drive.google.com/file/d/137ipjRH6FOAtfkPTq_LxhF28lee2A3d4/view?usp=sharing",
+    },
+];
+
+export const SOCIAL_LINKS = {
+    instagram: 'https://instagram.com/aitoolsteacher',
+    whatsapp: `https://wa.me/${WHATSAPP_NUMBER}`,
+    youtube: 'https://www.youtube.com/@aiteacherdz',
+    telegram: 'https://t.me/innovtechdz',
+};
